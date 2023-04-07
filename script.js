@@ -4,7 +4,7 @@ const adviceContainer = document.querySelector(".advice-container");
 const adviceId = document.getElementById("advice-id");
 const adviceText = document.getElementById("advice-text");
 const patterDivider = document.querySelector(".pattern-divider");
-const diceIcon = document.querySelector(".dice-box");
+const diceBtn = document.querySelector(".dice-box");
 const loader = document.querySelector(".loader");
 
 let adviceContent = {};
@@ -24,7 +24,7 @@ const showRandomAdvice = function () {
   getAdvice();
 };
 
-diceIcon.addEventListener("click", showRandomAdvice);
+diceBtn.addEventListener("click", showRandomAdvice);
 
 const getAdvice = async function () {
   loading();
@@ -36,8 +36,3 @@ const getAdvice = async function () {
 };
 
 getAdvice();
-
-console.log(window.innerWidth);
-if (window.innerWidth <= 490) {
-  patterDivider.src = "./images/pattern-divider-mobile.svg";
-}
